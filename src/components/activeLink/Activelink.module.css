@@ -1,0 +1,14 @@
+.link:hover {
+  color: #639605;
+  /* @apply hover:underline hover:#639605 mr-2 transition-all; */
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.active-link {
+ color: #639605;
+ border-bottom: 4px solid #639605;
+}
