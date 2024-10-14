@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Tech-House Frontend
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
-First, run the development server:
+Frontend de una implementacion de una lista de tareas utilizando Next.js.
 
+## 📝 Descripción
+
+Este proyecto es una aplicación frontend desarrollada con [Next.js](https://nextjs.org/). La aplicación consume la API pública de ejemplo ([jsonplaceholder](https://jsonplaceholder.typicode.com/todos/)) para mostrar información sobre tareas.
+
+## 🎨 Funcionalidades
+
+- **Interfaz de Usuario**: Implementada a partir del diseño proporcionado.
+- **Consumo de jsonplaceholder**: Obtén datos sobre tareas.
+- **Navegación Dinámica**: Navega fácilmente entre diferentes secciones de la aplicación.
+- **Renderizado Lado del Servidor**: Aprovecha las capacidades de Next.js para mejorar el rendimiento.
+
+## 🔧 Instalación
+
+1. **Clona el repositorio**:
+
+    ```bash
+    git clone https://github.com/mavillabasa-dev/tech-house-tasks.git
+    cd tech-house
+    ```
+
+2. **Instala las dependencias**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Ejecuta la aplicación**:
+
+    ```bash
+    npm run dev
+    ```
+
+    La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
+
+## 📁 Estructura del Proyecto
+
+- **`/pages`**: Contiene las páginas de la aplicación.
+- **`/components`**: Componentes reutilizables de la interfaz.
+- **`/public`**: Archivos estáticos como imágenes y fuentes.
+- **`/services`**: Servicios back.
+- **`/hooks`**: Custom hooks necesarios para este alcance.
+
+## 📁 Unit test
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    npm run test
 ```
+- Cree los unit test para componentes, custom hooks y servicios (no todos por cuestion de tiempo). el foco fue mostrar como poder testear los diferentes tipos de archivos y funcionalidades.
+- Configure jest para que podamos obtener el coverage, es un item importante a la hora de desplegar cumplir con este requisito de calidad.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Manejo de errores
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Implemente la funcion de Next de "Error Boundary" que propone - [Error Next.js](https://nextjs.org/docs/app/building-your-application/routing/error-handling)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Agregar y eliminar tareas
 
-## Learn More
+- En este caso simule el agregar y eliminar desde el front manejando el arreglo de tareas que obtengo del back.  
 
-To learn more about Next.js, take a look at the following resources:
+## 🔗 Enlaces Útiles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentación de Next.js](https://nextjs.org/docs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contribuciones
 
-## Deploy on Vercel
+¡Las contribuciones son bienvenidas! Si tienes sugerencias o mejoras, por favor abre un [issue](https://github.com/tu-usuario/tu-repositorio/issues) o envía un [pull request](https://github.com/tu-usuario/tu-repositorio/pulls).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑‍💻 Autor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Marcos Villabasa - [@mavillabasa-dev](https://github.com/mavillabasa-dev/)
+
+## 📜 Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
