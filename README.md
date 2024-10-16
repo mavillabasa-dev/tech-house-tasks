@@ -15,6 +15,10 @@ Este proyecto es una aplicación frontend desarrollada con [Next.js](https://nex
 - **Navegación Dinámica**: Navega fácilmente entre diferentes secciones de la aplicación.
 - **Renderizado Lado del Servidor**: Aprovecha las capacidades de Next.js para mejorar el rendimiento.
 
+## 📄Paginación
+
+- Desarrollé la funcionalidad de paginación en la rama **feature/pagination**, donde conecté el frontend a una API que creé específicamente para este challenge. En esta rama, el frontend interactúa con la API para realizar operaciones de paginación, agregar y eliminar tareas (todos), y gestionar los datos almacenados en una base de datos MongoDB. Además, implementé un cron job en la API para sincronizar y actualizar los datos periódicamente. Puedes ver el código de la API en este [REPOSITORIO](https://github.com/mavillabasa-dev/tech-house-api).
+
 ## 🔧 Instalación
 
 1. **Clona el repositorio**:
