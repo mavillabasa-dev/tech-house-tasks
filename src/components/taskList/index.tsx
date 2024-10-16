@@ -1,21 +1,20 @@
 "use client";
 
-import { Task } from "@/models/task.model";
 import { Card } from "../card";
-import styles from "./tasklist.module.css";
 import { PrimaryButton } from "../primaryButton";
 import { useModal } from "@/hooks/useModal";
-import Modal from "../modal";
 import { AddTaskForm } from "../addTaskForm";
-import { useTaskManager } from "@/hooks/useTaskManager";
+import { useTasks } from "@/hooks/useTask";
+import Modal from "../modal";
+import Pagination from "../pagination";
+import styles from "./tasklist.module.css";
 
-interface ITasksList {
-  initialTasks: Task[];
-}
 
-export const TaskList = ({ initialTasks }: ITasksList) => {
+export const TaskList = () => {
   const { isOpen, toggle } = useModal();
-  const { addTask, removeTask, tasks } = useTaskManager(initialTasks);
+  const { tasks, currentPage, totalPages, loading, setCurrentPage, addTask, removeTask } = useTasks(1, 3);
+
+  if (loading) return <p>Cargando tareas...</p>;
 
   return (
     <>
@@ -30,8 +29,15 @@ export const TaskList = ({ initialTasks }: ITasksList) => {
             <Card key={`${index}-${value.id}`} task={value} removeTask={removeTask} />
           ))
         )}
+        <div className="my-2">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        </div>
         <div>
-          <PrimaryButton onClick={() => toggle()} label={"Añadir tarea"} disabled={false}/>
+          <PrimaryButton onClick={() => toggle()} label={"Añadir tarea"} disabled={false} />
         </div>
       </div>
       <Modal isOpen={isOpen} toggle={toggle}>

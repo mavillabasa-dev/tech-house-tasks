@@ -5,3 +5,10 @@ export interface Task {
   description: string;
   completed: boolean;
 }
+
+export interface Tasks {
+  todos: Task[];
+  currentPage: number;
+  totalPages: number;
+  totalTodos: number;
+}

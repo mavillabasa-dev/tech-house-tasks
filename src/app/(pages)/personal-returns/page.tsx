@@ -2,7 +2,7 @@
 export default function PersonalReturnsPage() {
   return (
     <div>
-      <h1>Personal Returns Page</h1>
+      <h1 className={"title"}>Mis devoluciones</h1>
     </div>
   );
 }

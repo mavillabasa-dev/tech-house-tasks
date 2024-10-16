@@ -15,6 +15,7 @@ export const AddTaskForm = ({ onSubmit, onCancel, closeModal }: AddTaskFormProps
   const { form, handleChange, errors } = useForm({
     title: "",
     description: "",
+    completed: false
   });
 
   const submit = (e: React.FormEvent) => {
